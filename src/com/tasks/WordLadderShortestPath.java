@@ -60,6 +60,8 @@ public class WordLadderShortestPath {
         String line;
         System.out.println("Please insert dictionary words or leave it as default from program. And push 'END' to finish dictionary.");
         Set<String> dictionaryFromConsole = new HashSet<String>();
+        dictionaryFromConsole.add(startWord);
+        dictionaryFromConsole.add(endWord);
         while ((line = reader.readLine()) != null && !line.equals("END")) {
             if (line.length() != startWord.length()) System.out.println("This value has not added because length is not the same as start word. Please print word with correct length again.");
             else {
